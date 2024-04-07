@@ -1,4 +1,10 @@
 module.exports = ({ env }) => ({
+  http: {
+    serverOptions: {
+      timeout: 900000,
+    },
+  }
+  ,
   host: env('HOST', '0.0.0.0'),
   port: env.int('PORT', 1337),
   app: {
